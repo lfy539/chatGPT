@@ -1,0 +1,112 @@
+.markdown {
+  line-height: 1.7;
+}
+
+.markdown p {
+  margin: 0 0 12px 0;
+}
+
+.markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown h1, .markdown h2, .markdown h3, 
+.markdown h4, .markdown h5, .markdown h6 {
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.markdown h1 { font-size: 1.5em; }
+.markdown h2 { font-size: 1.3em; }
+.markdown h3 { font-size: 1.15em; }
+
+.markdown ul, .markdown ol {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.markdown li {
+  margin: 4px 0;
+}
+
+.markdown blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 4px solid var(--accent-primary);
+  background-color: var(--bg-tertiary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.markdown table {
+  width: 100%;
+  margin: 12px 0;
+  border-collapse: collapse;
+}
+
+.markdown th, .markdown td {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.markdown th {
+  background-color: var(--bg-tertiary);
+  font-weight: 600;
+}
+
+.markdown hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+/* 行内代码 */
+.inlineCode {
+  padding: 2px 6px;
+  font-size: 0.9em;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* 代码块 */
+.codeBlock {
+  margin: 12px 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: #282c34;
+}
+
+.codeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #21252b;
+  border-bottom: 1px solid #3e4451;
+}
+
+.language {
+  font-size: 12px;
+  color: #abb2bf;
+  text-transform: uppercase;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #abb2bf;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.copyButton:hover {
+  background-color: #3e4451;
+  color: #ffffff;
+}

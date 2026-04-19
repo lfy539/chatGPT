@@ -1,0 +1,141 @@
+.messageWrapper {
+  display: flex;
+  gap: 16px;
+  padding: 20px 24px;
+  transition: background-color var(--transition-fast);
+}
+
+.messageWrapper:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: white;
+}
+
+.user .avatar {
+  background-color: var(--accent-primary);
+}
+
+.assistant .avatar {
+  background-color: var(--accent-secondary);
+}
+
+.content {
+  flex: 1;
+  max-width: 800px;
+  min-width: 0;
+}
+
+.user .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* 思考过程 */
+.thinkingWrapper {
+  margin-bottom: 12px;
+  border: 1px solid var(--thinking-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.thinkingToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background-color: var(--thinking-bg);
+  border: none;
+  color: var(--accent-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.thinkingToggle:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.thinkingContent {
+  padding: 14px;
+  background-color: var(--thinking-bg);
+  border-top: 1px solid var(--thinking-border);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* 消息内容 */
+.messageContent {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.user .messageContent {
+  background-color: var(--user-message-bg);
+  padding: 12px 16px;
+  border-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.user .messageContent p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  color: var(--accent-primary);
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* 操作按钮 */
+.actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.messageWrapper:hover .actions {
+  opacity: 1;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.actionButton:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
